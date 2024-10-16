@@ -8,7 +8,7 @@ import cv2
 
 
 def click_event(event, x, y, flags, param):
-    if event == cv2.EVENT_MOUSEMOVE and (flags & cv2.EVENT_FLAG_CTRLKEY) :
+    if event == cv2.EVENT_LBUTTONDOWN :
         print(x,", ", y)
         font = cv2.FONT_HERSHEY_SIMPLEX
         strXY = str(x) + ", " + str(y)
