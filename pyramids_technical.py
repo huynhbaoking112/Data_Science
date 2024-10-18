@@ -28,16 +28,17 @@ for i in range(6):
     gp.append(layer)
 
 
-layer = gp[5]
-cv2.imshow("uupper level Gaussian Pyramids", layer)
-lp = [layer]
 
-for i in range(5, 0, -1):
-    gaussian_extend = cv2.pyrUp(gp[i])     
-    laplacian = cv2.subtract(gp[i-1], gaussian_extend)
-    cv2.imshow(str(i), laplacian)
+# layer = gp[5]
+# cv2.imshow("uupper level Gaussian Pyramids", layer)
+# lp = [layer]
 
-cv2.imshow("origin image", img)
+# for i in range(5, 0, -1):
+#     gaussian_extend = cv2.pyrUp(gp[i])     
+#     laplacian = cv2.subtract(gp[i-1], gaussian_extend)
+#     cv2.imshow(str(i), laplacian)
+
+# cv2.imshow("origin image", img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
